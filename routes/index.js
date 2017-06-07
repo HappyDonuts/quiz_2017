@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 
@@ -44,6 +45,11 @@ router.get('/', function (req, res, next) {
 // Pagina de creditos
 router.get('/author', function (req, res, next) {
     res.render('author');
+});
+
+// Página de ayuda
+router.get('/help', function(req, res, next) {
+    res.render('help');
 });
 
 
@@ -133,9 +139,11 @@ router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
     tipController.destroy);
 
 
-// Página de ayuda
-router.get('/help', function(req, res, next) {
-    res.render('help');
-});
-
 module.exports = router;
+
+var express = require('express');
+var router = express.Router();
+
+
+
+
